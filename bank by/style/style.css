@@ -1,0 +1,386 @@
+
+
+html{
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+  }
+
+
+
+
+*,*::after , *::before{
+    box-sizing: inherit;
+}
+
+
+header{
+    display: flex;
+    border-bottom: solid 1px black ;
+    background-color: hsla(0, 0.00%, 100.00%, 1.00);
+  }
+
+
+/* так тут я убрал у всех ссылок на странице подчеркивание и цвет  */
+a{
+    color: inherit;
+    text-decoration: none;
+  }
+
+
+/* Вот тут анимация для всех изображений keyframes(дословно ключевые кадры) */
+@keyframes imageAnimation {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 0 rgba(255, 255, 255, 1));
+  }
+  50% {
+    transform: rotate(3deg) scale(1.05);
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 0 rgba(255, 255, 255, 1));
+  }
+}
+
+
+img {
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+img:hover {
+  animation: imageAnimation 0.5s infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header--info{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar--logo{
+    position: relative;
+    float: left;
+    text-decoration: none;
+    color: #333333;
+    max-width: 30%;
+    min-width: 35%;
+    max-height: 20%;
+}
+
+.logo--img{
+    margin-left: 10px;
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.header--menu{
+    padding: auto;
+    display: inline;
+}
+
+.header--menu-nav{
+    font-size: 28px;
+    color: black;
+    padding-right: 3%;
+}
+
+.header--menu-nav:hover{
+    color: gray;
+    transition: 0.5s;
+}
+
+
+.about--me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.title--text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text--nav{
+    width: 100%;
+    max-width: 48rem;
+}
+.font__text{
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.button--info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+.btn--info{
+   padding: 20px 20px 20px 20px;
+    border: solid 1px #333333;
+    border-radius: 10%;
+    background-color: black;
+}
+
+.btn--info:hover{
+    background-color: gray;
+    transition: 0.5s;
+    color: gray;
+}
+.btn--link:hover{
+    color: black;
+}
+
+.btn--link{
+    color: white;
+}
+
+
+
+.img--content{
+    padding-top: 5%;
+    display: inline-flex;
+}
+.img--log{
+    text-align: center;
+}
+
+.img--item{
+    box-shadow: 10px 5px 5px black;
+    max-width: 70%;
+    max-height: 70%;
+    
+}
+
+
+.blog--info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left:5% ;
+    padding-right:5% ;
+}
+
+.title__main-text{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.content__main-text{
+    font-weight: 200;
+    color: #686868;
+    font-size: 22px;
+    margin-bottom: 5%;
+}
+
+.collum-content{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 3rem;
+    grid-row-gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+
+.image__content__text{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image__text-content{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.second__blog{
+    display: grid;
+    align-items: center;
+    grid-column-gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.second__img{
+    max-width: 605px;
+    max-height: 605px;
+}
+
+.slideshow-container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.prev , .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+
+.prev:hover , next:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot{
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+.active, dot:hover{
+    background-color: #717171;
+}
+
+.fade{
+    -webkit-animation-name: fade ;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade{
+    from{opacity: .4}
+    to{opacity: 1}
+}
+@keyframes fade{
+    from{opacity: .4 }
+    to{opacity: 1}
+}
+
+
+
+.feedback-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .feedback-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .feedback-form input,.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .submit{
+    font-size: 28px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    background-color: transparent;
+    border-style:none ;
+
+  }
+
+  .submit:hover{
+    border-style: inset;
+    color: gray;
+    transition: 0.5s ease-in-out;
+  }
+
+
+  .footer {
+    border-top: solid 1px black;
+    color: gray;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer p {
+    margin: 10px 0 0;
+  }
+  
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-icons li:last-child {
+    margin-right: 0;
+  }
+  
+  .icon-link {
+    color: white;
+    font-size: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .icon-link:hover {
+    opacity: 1;
+  }
+  

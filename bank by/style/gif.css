@@ -1,0 +1,46 @@
+body {
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    padding: 1px;
+}
+
+.images_cent {
+    text-align: center;
+}
+
+.images_cent img {
+    width: 50%;
+    height: auto;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 24px;
+}
+
+.content button {
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+button{
+    font-size: 28px;
+    color: pink;
+    border: 2px solid pink;
+    border-radius: 5%;
+}
+
+button:hover{
+    color: white;
+    background-color: blueviolet;
+    border: 2px solid pink;
+    transition: 0.2s ease;
+}
